@@ -1,7 +1,7 @@
 body {
     margin: 9;
     overflow: scroll;
-    background: #9f9f65 url(https://bookbug.neocities.org/images/gridbookbugg.jpg) fixed repeat;
+    background: #9f9f65 url(images/miniGrid.jpg) fixed repeat;
     background-repeat: repeat;
     background-position: 0px 0px;
     font-family: "Grandstander", cursive;
@@ -40,8 +40,6 @@ body {
     text-align: left;
     margin-bottom: -20px;
 
-
-
 }
 .textWImages{
     display: flex;
@@ -69,6 +67,11 @@ body {
   }
   @keyframes bgScrolling {
     0% {background-position: 50px 50px, 120px 120px;}
+  }
+  .circle{
+    border-radius: 100%;
+    margin-right: 100px;
+    width: 80px;
   }
 .bodybox {
     width: 100%;
@@ -238,11 +241,6 @@ li:hover{
     display: block;
   }
 
-
-
-
-
-
   @keyframes bounce {
     0%, 100% {
       transform: translateY(0);
@@ -296,13 +294,13 @@ li:hover{
     animation: bounce 2s infinite ease-in-out;
     content: '';
     position: absolute;
-    bottom: -15px; /* How far below the bubble */
-    left: 50%; /* Center it horizontally */
+    bottom: -15px; 
+    left: 50%; 
     transform: translateX(-50%);
     width: 0;
     height: 0;
     border: 8px solid transparent;
-    border-top-color: #fff; /* Color of the bubble */
+    border-top-color: #fff; 
     z-index: 1;
   }
   .speech-bubble::before {
@@ -315,7 +313,7 @@ li:hover{
     width: 0;
     height: 0;
     border: 9px solid transparent;
-    border-top-color: #333; /* Same as your speech bubble border */
+    border-top-color: #333; 
     z-index: 0;
   }
   
@@ -340,7 +338,38 @@ li:hover{
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
 }
+.language-skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
 
+.language-skill label {
+  width: 80px; 
+  margin-right: 10px;
+  font-weight: bold;
+  color:rgb(87, 87, 110);
+}
+
+.language-skill progress {
+  width: 300px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+progress {
+  height: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+progress::-webkit-progress-bar {
+  background-color: #eee;
+}
+
+progress::-webkit-progress-value {
+background: linear-gradient(90deg, #fad9f5, #ffccb6);
+border-radius: 20px;
+}
 .block {
   background: #f9f9f9;
   padding: 20px;
@@ -370,4 +399,39 @@ li:hover{
 }
 .blockImg:hover{
   transform:scale(1.1);
+}
+.list{
+  color: #627b98;
+}
+.blog-window {
+  width: 90%;
+  max-width: 700px;
+  margin: 40px auto;
+  background: #fffefc;
+  border: 2px solid #d8eacb;
+  border-radius: 15px;
+  box-shadow: 3px 3px 0px #c4d4b0;
+  overflow: hidden;
+  margin-right: 50px;
+}
+
+.window-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f6fbe8;
+  padding: 8px 12px;
+  border-bottom: 2px dashed #bfd6b8;
+}
+.blog-body {
+  padding: 20px;
+  min-height: 200px;
+  font-size: 14px;
+  color: #6a7a5a;
+}
+.wip {
+  margin: 10px;
+  width: 300px;
+
+
 }
